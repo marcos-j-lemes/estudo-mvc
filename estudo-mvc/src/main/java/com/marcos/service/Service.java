@@ -2,6 +2,7 @@ package com.marcos.service;
 
 import com.marcos.model.User;
 import com.marcos.repository.Repository;
+import com.marcos.dto.Request;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +11,11 @@ public class Service{
 
     Repository repository = new Repository();
 
-    public final boolean addNovoUser(String nome){
-        User user = new User(nome);
+    public final boolean addNovoUser(Request nome){
+
+        System.out.println(nome.getNome());
+
+        User user = new User(nome.getNome());
         repository.addUser(user);
         return true;
     }

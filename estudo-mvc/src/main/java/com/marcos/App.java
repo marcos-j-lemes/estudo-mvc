@@ -13,10 +13,17 @@ public class App
 
         System.out.println( "=============== ===================== =========" );
 
+
+        service.addNovoUser(dto);
+        //service.addNovoUser(dto.getNome());
+
+        //String nome = dbt.getNome();
+        //service.addNovoUser(nome);
+
+        service.usuarios();
+    }
+}
         //dto.setNome("Marcos");
-
-        service.addNovoUser(dto.getNome());
-
         // String[] letras = {"A","B","C","D","E","A","B","C","D","E","A","B","C","D","E"};
 
         // String nome = "marcos";
@@ -24,8 +31,3 @@ public class App
         // for(int i = 0; i < letras.length; i++){
         //     boolean a = service.addNovoUser(letras[i]);
         // }
-
-
-        service.usuarios();
-    }
-}
